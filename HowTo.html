@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from www.mazegenerator.net/HowTo.aspx by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 29 Sep 2020 14:53:23 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head><link rel="icon" type="image/vnd.microsoft.icon" href="favicon.ico" /><link rel="stylesheet" href="static/default03.css" type="text/css" /><link rel="meta" href="labels.xml" type="application/rdf+xml" title="ICRA labels" /><meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="HandheldFriendly" content="true" />
+    <script type="text/javascript" async src="https://www.googletagmanager.com/gtag/js?id=UA-68135516-1"></script>
+    <script type="text/javascript">
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-68135516-1');
+    </script>
+    <title>
+	How to use mazes from Maze Generator
+</title></head>
+<body>
+    <form method="post" action="http://www.mazegenerator.net/HowTo.aspx" id="form1">
+<div class="aspNetHidden">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="Cyh5ZGU7s2Bnr6KAssdkdVsG5oXoqo91a1PWnwOFx1KNlkbTkXqZ1P3gHqusAYdOt6wYdU3r2g1gIqgjjjmYK8Au5ss=" />
+</div>
+
+<div class="aspNetHidden">
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="FB4C24A5" />
+</div>
+        <div>
+            <h1>How to use mazes from Maze Generator</h1>
+            <h2>Unity and Blender</h2>
+            <p>The following summarize how to use a maze from Maze Generator in Unity with the help of Blender. Thanks to Christopher Lackey at Bradley University for putting this information together!</p>
+            <ul>
+                <li>Make maze and download as SVG.</li>
+                <li>Import SVG into Blender (it will be a set of &quot;curve&quot; objects, which is the number of wall segments, and could be quite a few).</li>
+                <li>Optional: Edit walls, maybe remove some if you're not concerned about a single-solution maze, or add some to make closed-off sections, etc.</li>
+                <li>Select All and then Join, so it's one object. You can also opt to not join the walls, or only join smaller sections of them as desired. These would import as separate child objects of the main object in Unity, which allows them to be moved, rotated, scaled, disappear, etc. independently of each other. Trap doors? Revolving doors? Walls that open based on a condition? Walls that slide open and closed? etc. Some minor adjustments might need to be made on wall sizes so they don't collide with each other, but that's simple.</li>
+                <li>Extrude a tiny amount (like 0.0001), this creates a bit of height, doesn't need much because you can stretch this in Unity, it just needs to be more than 0.</li>
+                <li>Add a &quot;Solidify&quot; modifier with a tiny value (like 0.0001, just needs to be more than 0), this thickens the walls a bit or they won't render properly in Unity (only one side of each face will render because of &quot;backface culling&quot;).</li>
+                <li>Save as a .blend file.</li>
+                <li>Import into Unity and scale to whatever width, depth, and height you want. So for mazes where you need a lot of space for the player, scale them way out in the X and Y dimensions.</li>
+                <li>Add a Mesh Collider so it will act solid when objects hit it.</li>
+            </ul>
+            <h2>CNC Milling Machine</h2>
+            <p>For some hints about how to use a maze as an input to a CNC milling machine check out Rob Meades' description of how he used a <a href="http://www.meades.org/misc/maze/maze.html">CNC milling machine to cut a maze in a brass plate</a>.</p>
+            <p><a id="ReturnLink" href="javascript:history.back()">Return to previous page</a></p>
+            <hr />
+            <address>Copyright © 2020 <a id="OwnerLink" href="http://www.jgbservice.com/">JGB Service</a></address>
+        </div>
+    </form>
+</body>
+
+<!-- Mirrored from www.mazegenerator.net/HowTo.aspx by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 29 Sep 2020 14:53:23 GMT -->
+</html>

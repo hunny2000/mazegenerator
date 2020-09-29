@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+
+<!-- Mirrored from www.mazegenerator.net/Help.aspx by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 29 Sep 2020 14:53:20 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head><link rel="icon" type="image/vnd.microsoft.icon" href="favicon.ico" /><link rel="stylesheet" href="static/default03.css" type="text/css" /><link rel="meta" href="labels.xml" type="application/rdf+xml" title="ICRA labels" /><meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="HandheldFriendly" content="true" />
+    <script type="text/javascript" async src="https://www.googletagmanager.com/gtag/js?id=UA-68135516-1"></script>
+    <script type="text/javascript">
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-68135516-1');
+    </script>
+    <title>
+	Help - Maze Generator
+</title></head>
+<body>
+    <form method="post" action="http://www.mazegenerator.net/Help.aspx" id="form1">
+<div class="aspNetHidden">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="shxHGXPGHpPr1YVObugwSeO7pfoekVLsUGKizhM9gC7kRSl5S164U4Ch2nsvDoAkp+S80MKBdCiEEoR4JGVVEoLAIhY=" />
+</div>
+
+<div class="aspNetHidden">
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="BDEA3729" />
+</div>
+    <div>
+        <h1>Help on Maze Generator</h1>
+        <p>This website generates what is called "perfect" mazes, i.e. mazes with exactly one solution and without any isolated sections. The generated maze is displayed on the screen, but you can also download it as a PDF, SVG or PNG file.</p>
+        <h2>Shape</h2>
+        <p>Currently, there are four shapes available:</p>
+        <ul>
+            <li>Rectangular – The outer borders of the maze will roughly form a rectangle. The cells making up the maze can have three different styles; squares (an orthogonal maze), hexagons (a sigma maze) or triangles (a delta maze). This is the original mode of this website and will be familiar to those that has used it before.</li>
+            <li>Circular – The outer borders of the maze will form a circle. This is also called a theta maze.</li>
+            <li>Triangular – The outer borders of the maze will form a triangle. The cells used in this maze are all triangular, i.e. it is a delta maze.</li>
+            <li>Hexagonal – The outer borders of the maze will form a hexagon. The cells used in this maze can be either hexagonal or triangular, i.e. it is a sigma or delta maze.</li>
+        </ul>
+        <h2>Rectangular Maze</h2>
+        <h3>Style</h3>
+        <p>Currently, there are three styles available:</p>
+        <ul>
+            <li>Orthogonal (Square cells) - The most common format, where cells have passages intersecting at right angles.</li>
+            <li>Sigma (Hexagonal cells) - A maze composed of interlocking hexagons, where each cell may have up to six passages connected to it.</li>
+            <li>Delta (Triangular cells) - A maze composed of interlocking triangles, where each cell may have up to three passages connected to it.</li>
+        </ul>
+        <h3>Width and Height</h3>
+        <p>The width and height describes how many cells the maze should consist of. They must be between 2 and 200. Please note that the proportions of the maze also depend on the style of the maze.</p>
+        <h3>Inner Width and Inner Height</h3>
+        <p>The inner width and inner height describes how many cells the optional central room should consist of. They must be between 2 and the current width or height minus 2. Please note that the proportions of the central room also depend on the style of the maze. If you do not want a central room, set both inner width and inner height to 0.</p>
+        <h2>Circular Maze</h2>
+        <h3>Outer diameter</h3>
+        <p>The outer diameter describes how large the maze should be. It must be between 5 and 200 cells.</p>
+        <h3>Inner diameter</h3>
+        <p>The inner diameter describes how large the central room should be. It must be at least 3 cells and at most 2 cells smaller than the outer diameter. Another limitation is that the difference between the outer and inner diameters must be an even number of cells. But don't worry, the numbers will most of the time be auto adjusted to something that works.</p>
+        <h2>Triangular Maze</h2>
+        <h3>Side Length</h3>
+        <p>The side length describes how many cells long the triangle's sides should be. It has to be between 3 and 200 cells.</p>
+        <h3>Inner Side Length</h3>
+        <p>The inner side length describes how many cells long the optional triangular central chamber's sides should be. It has to be at least 3 cells but the difference between the side length and the inner side length also has to be evenly dividable by three. The system will try to adjust this value to something that is valid. If you do not want a central chamber set this value to 0.</p>
+        <h2>Hexagonal Maze</h2>
+        <h3>Style</h3>
+        <p>Currently, there are two styles available:</p>
+        <ul>
+            <li>Sigma (Hexagonal cells) - A maze composed of interlocking hexagons, where each cell may have up to six passages connected to it.</li>
+            <li>Delta (Triangular cells) - A maze composed of interlocking triangles, where each cell may have up to three passages connected to it.</li>
+        </ul>
+        <h3>Side Length</h3>
+        <p>The side length describes how many cells long the hexagon's sides should be. It has to be between 1 and 120 cells.</p>
+        <h3>Inner Side Length</h3>
+        <p>The inner side length describes how many cells long the optional hexagonal central chamber's sides should be. It has to be at least 1 cell but also has to be at least one cell smaller than the side length. The system will try to adjust this value to something that is valid. If you do not want a central chamber set this value to 0.</p>
+        <h2>Starts at</h2>
+        <p>The standard setting is that the maze starts at the top and, consequently, finishes at the bottom (or the center if it is a circular maze). You can reverse this so that the maze starts the bottom or center, and ends at the top. This actually makes a difference even though it isn't immediately obvious. The algorithm that creates the maze is designed to make the maze harder to solve if you start at the designated starting point. So if you are planning to make something like "Help Max find his dog" you should place Max at the point you have selected as the starting point and the dog at the other end.</p>
+        <h2>Advanced settings</h2>
+        <p>These settings control the maze generation algorithm. But since the generation algorithm uses a good random number source they will not guarantee that the maze has a specific style. I.e. setting the E-value to 100 will not necessarily generate an elitist maze every time.
+           </p>
+        <ul>
+            <li>E-value - Controls the elitism tendency of the generation algorithm. An elitist maze has a short solution relative to the size of the maze, while a non-elitist has a solution going through a larger portion of the maze.</li>
+            <li>R-value - Controls the river tendency of the generation algorithm. A maze with a high river factor has few but long dead ends, while one with a low river factor will have many short dead ends.</li>
+        </ul>
+        <h2>Printing</h2>
+        <p>It is, of course, possible to print the maze by just printing the web page or by right-clicking the maze and select "Print image...". However, you will get much better print quality by downloading the PDF file (in a suitable page format) and print it instead. The reason for this is that the maze is stored as a vector image in the PDF file and as such it will scale to your printer's resolution without losing sharpness.</p>
+        <p><a id="ReturnLink" href="Default.html">Return to the maze generator</a></p>
+        <hr />
+        <address>Copyright © 2020 <a id="OwnerLink" href="http://www.jgbservice.com/">JGB Service</a></address>
+    </div>
+    </form>
+</body>
+
+<!-- Mirrored from www.mazegenerator.net/Help.aspx by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 29 Sep 2020 14:53:20 GMT -->
+</html>

@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<!-- Mirrored from www.mazegenerator.net/Default.aspx by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 29 Sep 2020 14:53:23 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head><link rel="icon" type="image/vnd.microsoft.icon" href="favicon.ico" /><link rel="stylesheet" href="static/default03.css" type="text/css" /><link rel="meta" href="labels.xml" type="application/rdf+xml" title="ICRA labels" /><meta name="viewport" content="width=480px, initial-scale=1.0" /><meta name="HandheldFriendly" content="true" />
+    <script type="text/javascript" async src="https://www.googletagmanager.com/gtag/js?id=UA-68135516-1"></script>
+    <script type="text/javascript">
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-68135516-1');
+    </script>
+    <title>
+	Maze Generator
+</title><meta name="description" content="Create, download and print random mazes in varying styles and sizes." /><meta property="fb:admins" content="689811391" /><meta property="og:type" content="website" /><meta property="og:url" content="http://mazegenerator.net/" /><meta property="og:locale" content="en_US" /><meta property="og:locale:alternate" content="sv_SE" /><meta property="og:title" content="Maze Generator" /><meta property="og:description" content="Create, download and print random mazes in varying styles and sizes." /><meta property="og:image" content="http://mazegenerator.net/static/og_image_white_bg.png" /></head>
+<body>
+    <div id="fb-root"></div>
+    <script type="text/javascript">(function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = "../connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.0";
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));</script>
+    <form method="post" action="http://www.mazegenerator.net/Default.aspx" id="form1">
+<div class="aspNetHidden">
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
+<input type="hidden" name="__LASTFOCUS" id="__LASTFOCUS" value="" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="ujUe/v1UgpoywLV4lg2FefqkRa1vrt9gT1eYBaaFljXOt3ZEAOehlDP0bqByPk2xpEDsup6ZXGaWOKMAtFGyNTgBG6nARs4VUMmmXSqbs/98CTU2Wd63tz7YVa5jTZgAwUnyXIIjv85bfCX8eUK21MM/AkeuidJT9AYIQftj7q8drZ6HntyYuhe3JffiYD342wPkNSzpcSBQDqRmFGHbb4fypP/u0Swg9DmNxSGa3shZ+10JwVjneXt19sMcV/IAbfRRzw==" />
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['form1'];
+if (!theForm) {
+    theForm = document.form1;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<div class="aspNetHidden">
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="CA0B0334" />
+	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="eQDTp9ALnAj6qchDJUHk/o5JRPCSrJft6mArkFkwnwBNn5hvPA7h+Q0XGMiJtEbC6C0bsUQDwR+41f9FBKxptAeRKYwAESRsoAjd+MbRKnqVc3oSMyn0N4l4H2IpwPCyTDgfC7dsU5h9if0QlTySBORlldw4mA0aczM3DcIvzZci2J2p38RE6Jjodkhw2TVA/9f30f7+TCnJcSQpP6XTyjg5vcV6kM58CtTf7cJY3BEig45ymGvBElKuSH6JnqZSIpsFA7MzqZI6y5SYJlaskJe4O2ywpT8rHDTYS+CTFOyyEzw63hJ0dDa3DDpIj0qg68sccT5ibOaO2TUG6QSv6TP4QZs+WpTzFCMk7WeA6W36wvvX65+KfV1ySuKTteP4sgLjrDAOCXAG36wAIfUhsB//MPts6fN1HsS7fsZu+MxDw+Cp4Mj3xMUi3Adzwt3he5e15eeG4lqrO4143VvvY8xBMu0=" />
+</div>
+        <h1 id="ControlBoxHeader">Maze Generator</h1>
+        <div>
+            <div class="ControlBox">
+                <div class="ShapeSection">
+                    <label for="ShapeDropDownList" id="ShapeLabel">Shape:</label>
+                    <select name="ShapeDropDownList" onchange="javascript:setTimeout(&#39;__doPostBack(\&#39;ShapeDropDownList\&#39;,\&#39;\&#39;)&#39;, 0)" id="ShapeDropDownList">
+	<option selected="selected" value="1">Rectangular</option>
+	<option value="2">Circular</option>
+	<option value="3">Triangular</option>
+	<option value="4">Hexagonal</option>
+
+</select>
+                </div>
+                <table class="Settings">
+                    
+                            <tr>
+                                <td class="SettingLabel">
+                                    <label for="S1TesselationDropDownList" id="S1StyleLabel">Style:</label>
+                                </td>
+                                <td class="SettingValue">
+                                    <select name="S1TesselationDropDownList" onchange="javascript:setTimeout(&#39;__doPostBack(\&#39;S1TesselationDropDownList\&#39;,\&#39;\&#39;)&#39;, 0)" id="S1TesselationDropDownList">
+	<option selected="selected" value="1">Orthogonal (Square cells)</option>
+	<option value="2">Sigma (Hexagonal cells)</option>
+	<option value="3">Delta (Triangular cells)</option>
+
+</select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="SettingLabel">
+                                    <label for="S1WidthTextBox" id="S1WidthLabel">Width:</label>
+                                </td>
+                                <td class="SettingValue">
+                                    <input name="S1WidthTextBox" type="text" value="20" maxlength="5" id="S1WidthTextBox" style="width:40px;" />
+                                    (2 to 200 cells)
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="SettingLabel">
+                                    <label for="S1HeightTextBox" id="S1HeightLabel">Height:</label>
+                                </td>
+                                <td class="SettingValue">
+                                    <input name="S1HeightTextBox" type="text" value="20" maxlength="5" id="S1HeightTextBox" style="width:40px;" />
+                                    (2 to 200 cells)
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="SettingLabel">
+                                    <label for="S1InnerWidthTextBox" id="S1InnerWidthLabel">Inner width:</label>
+                                </td>
+                                <td class="SettingValue">
+                                    <input name="S1InnerWidthTextBox" type="text" value="0" maxlength="5" id="S1InnerWidthTextBox" style="width:40px;" />
+                                    (0 or 2 to width - 2 cells)
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="SettingLabel">
+                                    <label for="S1InnerHeightTextBox" id="S1InnerHeightLabel">Inner height:</label>
+                                </td>
+                                <td class="SettingValue">
+                                    <input name="S1InnerHeightTextBox" type="text" value="0" maxlength="5" id="S1InnerHeightTextBox" style="width:40px;" />
+                                    (0 or 2 to height - 2 cells)
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="SettingLabel">
+                                    <label for="S1StartsAtDropDownList" id="S1StartsAtLabel">Starts at:</label>
+                                </td>
+                                <td class="SettingValue">
+                                    <select name="S1StartsAtDropDownList" id="S1StartsAtDropDownList">
+	<option selected="selected" value="1">Top</option>
+	<option value="2">Bottom or inner room</option>
+
+</select>
+                                </td>
+                            </tr>
+                        
+                    <tr>
+                        <td class="SettingLabel">
+                            Advanced:
+                        </td>
+                        <td class="SettingValue">
+                            <label for="AlgorithmParameter1TextBox" id="AlgorithmParameter1Label">E:</label>
+                            <input name="AlgorithmParameter1TextBox" type="text" value="50" maxlength="5" id="AlgorithmParameter1TextBox" style="width:40px;" />
+                            (0 to 100), 
+                            <label for="AlgorithmParameter2TextBox" id="AlgorithmParameter2Label">R:</label>
+                            <input name="AlgorithmParameter2TextBox" type="text" value="100" maxlength="5" id="AlgorithmParameter2TextBox" style="width:40px;" />
+                            (0 to 100)
+                        </td>
+                    </tr>
+                </table>
+                <div class="LikeSection">
+                    <div class="fb-like" data-href="http://mazegenerator.net/" data-width="380" data-layout="standard" data-action="like" data-show-faces="false" data-share="true"></div>
+                </div>
+                <div class="LinkSection1">
+                    <a id="AboutLink" href="About.html">About</a>
+                    &nbsp;
+                    <a id="HelpLink" href="Help.html">Help</a>
+                    &nbsp;
+                    <a id="ExamplesLink" href="Examples.html">Examples</a>
+                    &nbsp;
+                    <a id="DonateLink" href="About.html#donate">Donate</a>
+                </div>
+                <div class="ButtonSection">
+                    <input type="submit" name="GenerateButton" value="Generate" id="GenerateButton" />
+                </div>
+                <div class="LinkSection2">
+                    <a id="CommercialUseLink" href="CommercialUse.html">Commercial use</a>
+                    &nbsp;
+                    <a id="HowToLink" href="HowTo.html">How tos</a>
+                </div>
+            </div>
+            <div id="InfoPanel" class="ControlBox">
+	
+                <h2 id="InfoHeader">Publishing on Amazon KDP or similar?</h2>
+                It saddens me to have to point this out: Contrary to what a number of less scrupulous "passive income" YouTubers lead you to believe, the mazes from this site are not free to use for commercial purposes. If you are planning to use them in something you will sell, you need to get a commercial license.  If you do not have such a license, you are committing a copyright infringement. For more information, see the link "Commercial use" above.
+            
+</div>
+            
+            
+            
+            <address id="MazeDisplayFooter">Copyright © 2020 <a id="OwnerLink" href="http://www.jgbservice.com/">JGB Service</a></address>
+        </div>
+    </form>
+</body>
+
+<!-- Mirrored from www.mazegenerator.net/Default.aspx by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 29 Sep 2020 14:53:23 GMT -->
+</html>
